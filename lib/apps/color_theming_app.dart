@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo_apps/screens/code_view_screen.dart';
 
 Color _themeSeed = Colors.red;
 
@@ -63,6 +64,15 @@ class HomeScreen extends StatelessWidget {
                 changeColorFunction: changeColorFunction),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => const CodeViewScreen(
+                codeFilePath: 'lib/apps/color_theming_app.dart'),
+          ));
+        },
+        child: const Icon(Icons.code),
       ),
     );
   }
