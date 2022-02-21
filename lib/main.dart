@@ -7,6 +7,7 @@ import 'package:flutter_demo_apps/apps/implicit_animations.dart';
 import 'package:flutter_demo_apps/apps/provider_app.dart';
 import 'package:flutter_demo_apps/apps/sunflower_app.dart';
 import 'package:flutter_demo_apps/apps/firebase_demo_app.dart';
+import 'apps/color_theming_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -43,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     {'title': 'Google Fonts App', 'app': const GoogleFontsApp()},
     {'title': 'Provider Demo App', 'app': const ProviderDemoApp()},
     {'title': 'Flutter Block Demo App', 'app': const FlutterBlocDemo()},
+    {'title': 'Color Theming App', 'app': const ColorThemingApp()},
   ];
   @override
   void initState() {
